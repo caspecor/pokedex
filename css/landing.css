@@ -1,0 +1,81 @@
+/* Landing Page Styles */
+body.landing {
+    background-color: #222;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.landing-container {
+    text-align: center;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+h1.landing-title {
+    font-family: 'Press Start 2P', cursive;
+    color: #FFD700;
+    margin-bottom: 40px;
+    text-shadow: 4px 4px 0 #DC0A2D;
+    font-size: 2.5rem;
+}
+
+.gen-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gen-card {
+    background-color: #333;
+    border: 2px solid #555;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gen-card:hover {
+    transform: translateY(-5px);
+    background-color: #444;
+    border-color: #DC0A2D;
+}
+
+.gen-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.gen-sub {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+/* Language Selector */
+.lang-selector {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.lang-btn:hover {
+    transform: scale(1.2);
+}

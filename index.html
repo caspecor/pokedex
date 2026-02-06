@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon | Pokédex</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/particles.css">
+</head>
+
+<body class="landing">
+    <script src="js/particles.js"></script>
+    <div class="landing-container">
+        <div class="lang-selector">
+            <button class="lang-btn" onclick="setLang('es')">🇪🇸</button>
+            <button class="lang-btn" onclick="setLang('en')">🇬🇧</button>
+            <button class="lang-btn" onclick="setLang('fr')">🇫🇷</button>
+        </div>
+        <script>
+            function setLang(lang) {
+                localStorage.setItem('pokedex_lang', lang);
+                // Visual feedback could be added here
+                alert('Language set to ' + lang.toUpperCase());
+            }
+        </script>
+        <h1 class="landing-title">POKEMON GENERATIONS</h1>
+        <div class="gen-grid">
+            <a href="pokedex.html?gen=1" class="gen-card">
+                <div class="gen-title">Gen 1</div>
+                <div class="gen-sub">Kanto</div>
+            </a>
+            <a href="pokedex.html?gen=2" class="gen-card">
+                <div class="gen-title">Gen 2</div>
+                <div class="gen-sub">Johto</div>
+            </a>
+            <a href="pokedex.html?gen=3" class="gen-card">
+                <div class="gen-title">Gen 3</div>
+                <div class="gen-sub">Hoenn</div>
+            </a>
+            <a href="pokedex.html?gen=4" class="gen-card">
+                <div class="gen-title">Gen 4</div>
+                <div class="gen-sub">Sinnoh</div>
+            </a>
+            <a href="pokedex.html?gen=5" class="gen-card">
+                <div class="gen-title">Gen 5</div>
+                <div class="gen-sub">Unova</div>
+            </a>
+            <a href="pokedex.html?gen=6" class="gen-card">
+                <div class="gen-title">Gen 6</div>
+                <div class="gen-sub">Kalos</div>
+            </a>
+            <a href="pokedex.html?gen=7" class="gen-card">
+                <div class="gen-title">Gen 7</div>
+                <div class="gen-sub">Alola</div>
+            </a>
+            <a href="pokedex.html?gen=8" class="gen-card">
+                <div class="gen-title">Gen 8</div>
+                <div class="gen-sub">Galar</div>
+            </a>
+            <a href="pokedex.html?gen=9" class="gen-card">
+                <div class="gen-title">Gen 9</div>
+                <div class="gen-sub">Paldea</div>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

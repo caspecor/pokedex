@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex Gen 1</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/particles.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="pokedex-container">
+        <div class="pokedex">
+            <!-- Left Panel -->
+            <div class="panel left-panel">
+                <div class="header-lights">
+                    <div class="big-light"></div>
+                    <div class="small-lights">
+                        <div class="light red"></div>
+                        <div class="light yellow"></div>
+                        <div class="light green"></div>
+                    </div>
+                </div>
+
+                <div class="screen-container">
+                    <div class="screen-border">
+                        <div class="tiny-lights">
+                            <div class="dot red"></div>
+                            <div class="dot red"></div>
+                        </div>
+                        <div class="main-screen">
+                            <img id="pokemon-image" src="" alt="Pokemon" style="display: none;">
+                            <span id="loading-text">Loading...</span>
+                        </div>
+                        <div class="screen-bottom">
+                            <div class="status-light"></div>
+                            <div class="speakers">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <div class="control-buttons">
+                        <button class="circle-btn black"></button>
+                        <div class="long-buttons">
+                            <button class="long-btn red"></button>
+                            <button class="long-btn blue"></button>
+                        </div>
+                    </div>
+                    <div class="green-scouter">
+                        <div class="scrolling-text"></div>
+                    </div>
+                    <div class="cross-pad">
+                        <div class="cross-key up"></div>
+                        <div class="cross-key left"></div>
+                        <div class="cross-key center"></div>
+                        <div class="cross-key right"></div>
+                        <div class="cross-key down"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hinge -->
+            <div class="hinge">
+                <div class="hinge-part top"></div>
+                <div class="hinge-part bottom"></div>
+            </div>
+
+            <!-- Right Panel -->
+            <div class="panel right-panel">
+                <div class="info-screen-container">
+                    <div class="info-screen" id="info-screen">
+                        <!-- Pokemon Data goes here -->
+                    </div>
+                </div>
+
+                <div class="keyboard-container">
+                    <!-- Blue grid buttons -->
+                    <div class="blue-grid">
+                        <button class="blue-key"></button><button class="blue-key"></button><button
+                            class="blue-key"></button><button class="blue-key"></button><button
+                            class="blue-key"></button>
+                        <button class="blue-key"></button><button class="blue-key"></button><button
+                            class="blue-key"></button><button class="blue-key"></button><button
+                            class="blue-key"></button>
+                    </div>
+                </div>
+
+                <div class="option-buttons">
+                    <button class="white-btn large" onclick="location.href='index.html'">SALIR</button>
+                    <button class="white-btn large">INFO</button>
+                    <div class="yellow-light"></div>
+                </div>
+
+                <div class="bottom-screens">
+                    <div class="mini-screen"></div>
+                    <div class="mini-screen"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h2 id="modal-title">#001 BULBASAUR</h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-images">
+                    <div class="img-container">
+                        <p>Normal</p>
+                        <img id="modal-img-normal" src="" alt="Normal">
+                    </div>
+                    <div class="img-container">
+                        <p>Shiny</p>
+                        <img id="modal-img-shiny" src="" alt="Shiny">
+                    </div>
+                </div>
+                <div class="modal-details">
+                    <div class="detail-section">
+                        <h3>Abilities</h3>
+                        <p id="modal-abilities">Loading...</p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Stats</h3>
+                        <ul id="modal-stats"></ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>Description</h3>
+                        <p id="modal-description">Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js?v=2"></script>
+    <script src="js/particles.js"></script>
+</body>
+
+</html>
