@@ -294,8 +294,8 @@ body {
 /* D-PAD */
 .cross-pad {
     position: relative;
-    width: 90px;
-    height: 90px;
+    width: 75px;
+    height: 75px;
 }
 
 .cross-key {
@@ -312,43 +312,43 @@ body {
 }
 
 .cross-key.center {
-    width: 30px;
-    height: 30px;
-    top: 30px;
-    left: 30px;
+    width: 25px;
+    height: 25px;
+    top: 25px;
+    left: 25px;
     z-index: 2;
     box-shadow: none;
     /* Smooth center */
 }
 
 .cross-key.up {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     top: 0;
-    left: 30px;
+    left: 25px;
     border-radius: 5px 5px 0 0;
 }
 
 .cross-key.down {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     bottom: 0;
-    left: 30px;
+    left: 25px;
     border-radius: 0 0 5px 5px;
 }
 
 .cross-key.left {
-    width: 30px;
-    height: 30px;
-    top: 30px;
+    width: 25px;
+    height: 25px;
+    top: 25px;
     left: 0;
     border-radius: 5px 0 0 5px;
 }
 
 .cross-key.right {
-    width: 30px;
-    height: 30px;
-    top: 30px;
+    width: 25px;
+    height: 25px;
+    top: 25px;
     right: 0;
     border-radius: 0 5px 5px 0;
 }
@@ -529,5 +529,124 @@ body {
 
     100% {
         transform: translateX(-100%);
+    }
+}
+
+/* MOBILE RESPONSIVENESS */
+@media screen and (max-width: 850px) {
+    body {
+        align-items: flex-start;
+        /* Allow scrolling from top */
+        padding-top: 20px;
+    }
+
+    .pokedex {
+        flex-direction: column;
+        align-items: center;
+        perspective: none;
+        height: auto;
+        padding-bottom: 20px;
+        transform-origin: top center;
+        /* Optional: scale down if screen is really small height-wise */
+    }
+
+    .panel {
+        width: 90vw;
+        max-width: 340px;
+        /* Reduced from 400px to fit narrower phones */
+        box-shadow: none;
+        border: 2px solid var(--panel-border);
+        padding: 15px;
+        /* Reduced padding */
+    }
+
+    .left-panel {
+        height: auto;
+        border-radius: 15px 15px 0 0;
+        border-bottom: none;
+        padding-bottom: 20px;
+        z-index: 2;
+    }
+
+    .left-panel::after {
+        display: none;
+    }
+
+    .hinge {
+        display: none;
+    }
+
+    .right-panel {
+        height: auto;
+        border-radius: 0 0 15px 15px;
+        border-top: none;
+        margin-top: -2px;
+        padding-top: 20px;
+        position: relative;
+    }
+
+    .right-panel::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 5%;
+        width: 90%;
+        height: 15px;
+        background: linear-gradient(180deg, #8b0000, #dc0a2d);
+        border-radius: 10px;
+        border: 2px solid var(--panel-border);
+        transform: translateY(-50%);
+        z-index: 3;
+    }
+
+    .main-screen {
+        height: 170px;
+        /* Reduced height */
+    }
+
+    #pokemon-image {
+        width: 140px;
+        /* Reduced slightly to fit new screen height */
+        height: 140px;
+    }
+
+    .cross-pad {
+        margin: 0 auto;
+        width: 75px;
+        /* Keep resized D-Pad */
+        height: 75px;
+        margin-bottom: 5px;
+    }
+
+    .controls {
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    /* Adjust blue keys to fit better */
+    .blue-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 3px;
+        margin-bottom: 10px;
+    }
+
+    .blue-key {
+        height: 35px;
+        font-size: 7px;
+    }
+
+    .white-btn {
+        height: 40px;
+        font-size: 9px;
+    }
+
+    .info-screen-container {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .info-screen {
+        font-size: 9px;
+        min-height: 80px;
     }
 }
