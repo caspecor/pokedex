@@ -60,6 +60,7 @@ h1.landing-title {
     font-size: 0.9rem;
     color: #aaa;
 }
+
 /* Language Selector */
 .lang-selector {
     display: flex;
@@ -78,4 +79,56 @@ h1.landing-title {
 
 .lang-btn:hover {
     transform: scale(1.2);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    body.landing {
+        height: auto;
+        min-height: 100vh;
+        padding: 20px 0;
+    }
+
+    .landing-container {
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    h1.landing-title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 0 #DC0A2D;
+    }
+
+    .gen-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .gen-card {
+        padding: 10px;
+    }
+
+    .gen-title {
+        font-size: 1rem;
+    }
+
+    .gen-sub {
+        font-size: 0.8rem;
+    }
+
+    .lang-selector {
+        margin-bottom: 1.5rem;
+    }
+
+    .lang-btn {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .gen-grid {
+        grid-template-columns: 1fr;
+    }
 }
